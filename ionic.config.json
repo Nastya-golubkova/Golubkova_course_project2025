@@ -1,0 +1,7 @@
+{
+  "name": "MushMap",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

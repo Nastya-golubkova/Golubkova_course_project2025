@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button (click)="goBack()">
+      Назад
+    </ion-button>
+    <ion-title>Список изображений</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="thumbnail.length > 0" class="image-container">
+    <ion-img 
+      *ngFor="let thumb of thumbnail; let i = index" 
+      alt="Изображение недоступно" 
+      [src]="'data:image/png;base64,' + thumb">
+    </ion-img>
+  </div>
+</ion-content>

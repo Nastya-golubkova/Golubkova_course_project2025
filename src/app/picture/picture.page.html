@@ -1,0 +1,22 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{name}}</ion-title>
+    <ion-button (click)="goBack()">
+      Назад
+    </ion-button>
+    <ion-button (click)="goForward()">
+      Ещё фото
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="image-container">
+    <!--
+    <ion-img alt="Изображение недоступно" [src]="'data:image/png;base64,' + thumbnail"></ion-img>
+    -->
+    <ion-img *ngIf="thumbnail"  alt="Изображение недоступно" [src]="thumbnail"></ion-img>
+    <p *ngIf="desc" class="image-caption">{{desc}}</p>
+  </div>
+</ion-content>
